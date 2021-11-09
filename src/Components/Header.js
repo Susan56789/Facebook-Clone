@@ -3,7 +3,7 @@ import './Header.css';
 import logo from '../Media/download.png';
 import { Search, Home, SupervisedUserCircle, Storefront, Flag, Subscriptions, Add, Forum, NotificationsActive, ExpandMore } from '@material-ui/icons';
 import { Avatar, IconButton } from '@material-ui/core';
-
+import user from '../Media/user.jpg';
 
 const Header = () => {
     return (
@@ -36,7 +36,7 @@ const Header = () => {
 
             <div className='header_right'>
 <div className='header_info'>
-<Avatar />
+<Avatar src={user} />
 <h4>Susan Wairimu</h4>
 </div>
 
