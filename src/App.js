@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
 
 const App = () => {
   return (
@@ -10,12 +11,14 @@ const App = () => {
 <Header />
 
       {/*App Body */}
-
-      {/*Sidebar */}
-
+<div className='app_body'>
+ {/*Sidebar */}
+<Sidebar />
       {/*Feed */}
 
       {/*Widgets */}
+</div>
+     
     </div>
   );
 }
