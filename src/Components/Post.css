@@ -21,3 +21,12 @@
 .post_avatar{
     margin-right: 10px;
 }
+
+.post_topInfo > h3{
+    font-size: medium;
+}
+
+.post_topInfo >p {
+    font-size: small;
+    color: grey;
+}
