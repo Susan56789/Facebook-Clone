@@ -1,0 +1,12 @@
+.widgets{
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    margin: 10px;
+    box-shadow: 0px 5px 17px -7px rgba(0,0,0,0.75);
+    
+}
+
+iframe{
+    height:200px;
+}
