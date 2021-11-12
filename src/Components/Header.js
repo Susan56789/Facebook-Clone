@@ -3,9 +3,11 @@ import './Header.css';
 import logo from '../Media/download.png';
 import { Search, Home, SupervisedUserCircle, Storefront, Flag, Subscriptions, Add, Forum, NotificationsActive, ExpandMore } from '@material-ui/icons';
 import { Avatar, IconButton } from '@material-ui/core';
-import user from '../Media/user.jpg';
+import { useStateValue } from './StateProvider';
+
 
 const Header = () => {
+    const [{user}, dispatch] = useStateValue();
     return (
         <div className='header'>
             <div className='header_left'>
@@ -36,8 +38,8 @@ const Header = () => {
 
             <div className='header_right'>
 <div className='header_info'>
-<Avatar src={user} />
-<h4>Susan Wairimu</h4>
+<Avatar src={user.photoURL} />
+<h4>{user.displayName}</h4>
 </div>
 
 <IconButton>
