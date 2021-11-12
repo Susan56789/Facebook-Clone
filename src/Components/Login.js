@@ -4,10 +4,15 @@ import logo from '../Media/download.png';
 import image from '../Media/download (1).png';
 import {} from '@material-ui/icons';
 import { Button } from '@material-ui/core';
+import {auth, provider } from '../firebase';
 
 function Login() {
 const signIn = () =>{
+auth.signInWithPopup(provider)
+.then(result =>{
+    console.log(result);
     
+}).catch((error) => alert(error.message))
 }
 
     return (
