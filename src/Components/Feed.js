@@ -11,8 +11,8 @@ const Feed = ({profilePic, message, timestamp, username, image}) => {
   useEffect(() => {
     db.collection('posts')
     .orderBy('timestamp','desc')
-    .onSnapshot((snap) => (
-      setPosts(snap.docs.map((doc) => ({...doc.data(), id: doc.id })))
+    .onSnapshot((snapShot) => (
+      setPosts(snapShot.docs.map((doc) => ({data: doc.data(), id: doc.id })))
   ));
 }, []);
         

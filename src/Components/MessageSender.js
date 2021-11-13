@@ -7,17 +7,20 @@ import db from '../firebase';
 import firebase from 'firebase/compat/app';
 
 function MessageSender() {
-const [input, setInput ] =useState('');
-const [imageUrl, setImageUrl] = useState('');
+const [input, setInput ] =useState(' ');
+const [imageUrl, setImageUrl] = useState(' ');
 
-const handleSubmit = (event) =>{
-event.preventDefault();
+const handleSubmit = (e) =>{
+e.preventDefault();
+setInput(' ');
+setImageUrl(' ');
 
-db.collection['posts'].add({
+db.collection('posts').add({
     message: input,
     timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-    profilePic: user.profileURL,
+    profilePic: user.photoURL,
     image: imageUrl,
+    username:user.displayName,
 
 })
 
@@ -29,12 +32,12 @@ const [{user}, dispatch] = useStateValue();
         <div className='messageSender'>
             <div className='messageSender_top'>
             <Avatar src={user.photoURL} />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input value={input} onChange={(e) => setInput(e.target.value)}
                  type='text' placeholder={`What's on your mind ${user.displayName} ?`}   className='messageSender_input'/>
                 <input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}
                 type='text'  placeholder='image URL (optional)' className='messageSender_input'/>
-                <button type='submit' onSubmit={handleSubmit}> 
+                <button type='submit' onClick={handleSubmit}> 
                     Submit
                 </button>
             </form>
