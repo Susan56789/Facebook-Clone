@@ -8,10 +8,9 @@ function Widgets() {
                 frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                width='344'
-                height='150'
+
                 style={{ border: 'none', overflow: 'hidden' }}
-                scrolling='no'
+
                 allowTransparency='true'
                 title='frame1'
             >
@@ -20,10 +19,9 @@ function Widgets() {
                 frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                width='344'
-                height='150'
+
                 style={{ border: 'none', overflow: 'hidden' }}
-                scrolling='no'
+
                 allowTransparency='true'
                 title='frame1'
             ></iframe>
@@ -31,10 +29,9 @@ function Widgets() {
                 frameborder="0"
                 allowfullscreen="true"
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                width='344'
-                height='150'
+
+
                 style={{ border: 'none', overflow: 'hidden' }}
-                scrolling='no'
                 allowTransparency='true'
                 title='frame1'
             ></iframe>
