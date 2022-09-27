@@ -6,32 +6,31 @@ import Feed from './Components/Feed';
 import Widgets from './Components/Widgets';
 import Login from './Components/Login';
 import { useStateValue } from './Components/StateProvider';
-
 const App = () => {
-  const [{user}, dispatch ] =useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className='app'>
-      {!user ? 
-      (<Login/>)
-      :
-      (<>
-      {/*Header */}
-      <Header />
+      {!user ?
+        (<Login />)
+        :
+        (<>
+          {/*Header */}
+          <Header />
 
-      {/*App Body */}
-     <div className='app_body'>
+          {/*App Body */}
+          <div className='app_body'>
 
-       {/*Sidebar */}
-      <Sidebar />
+            {/*Sidebar */}
+            <Sidebar />
 
-      {/*Feed */}
-      <Feed />
+            {/*Feed */}
+            <Feed />
 
-      {/*Widgets */}
-       <Widgets />
-       </div>
-      </>
-      )}
+            {/*Widgets */}
+            <Widgets />
+          </div>
+        </>
+        )}
 
     </div>
   );
