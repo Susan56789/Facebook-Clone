@@ -27,6 +27,7 @@
     margin: 0 5px;
     border-radius: 999px;
     background-color: whitesmoke;
+    color: #333 !important;
 }
 
 .messageSender_top > form > button {
@@ -35,7 +36,6 @@
 
 .messageSender_input{
     flex: 1;
-    color:black;
 }
 
 .messageSender_bottom{
@@ -60,4 +60,8 @@
 .messageSender_option:hover{
     background-color: lightgray;
     border-radius: 20px;
+}
+
+.messageSender_bottom > .messageSender_option > .MuiSvgIcon-root{
+    color: #2e81f4;
 }

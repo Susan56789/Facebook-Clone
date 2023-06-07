@@ -34,8 +34,10 @@ const [{user}, dispatch] = useStateValue();
             <Avatar src={user.photoURL} />
             <form onSubmit={handleSubmit}>
                 <input value={input} onChange={(e) => setInput(e.target.value)}
-                 type='text' placeholder={`What's on your mind ${user.displayName} ?`}   className='messageSender_input'/>
+                 type='text' placeholder={`What's on your mind, ${user.displayName}?`}   
+                 className='messageSender_input'/>
                 <input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)}
+
                 type='text'  placeholder='image URL (optional)' className='messageSender_input'/>
                 <button type='submit' onClick={handleSubmit}> 
                     Submit
